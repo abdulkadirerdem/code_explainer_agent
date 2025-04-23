@@ -1,0 +1,21 @@
+{
+  "file": "user_service.py",
+  "functions": [
+    {
+      "name": "create_user",
+      "code": "def create_user(data):\n    user = User(**data)\n    db.save(user)\n    return user.id",
+      "docstring": "Creates a new user and saves it to the database.",
+      "fan_in": 3,
+      "fan_out": 2,
+      "is_entry_point": false
+    },
+    {
+      "name": "initialize_app",
+      "code": "def initialize_app():\n    load_env()\n    start_server()\n    return True",
+      "docstring": "",
+      "fan_in": 0,
+      "fan_out": 1,
+      "is_entry_point": true
+    }
+  ]
+}
