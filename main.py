@@ -1,12 +1,11 @@
 import argparse
 import logging
-import json
 import os
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.prompt import Prompt
 
-from agent_center.chain import CodeExplainerAgent
+from agents.chain import CodeExplainerAgent
 
 # Set up logging
 logging.basicConfig(

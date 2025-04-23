@@ -4,8 +4,8 @@ from typing import List, Dict, Any, Optional
 import os
 
 from openai import OpenAI
-from agent_center.types import FunctionInfo, ActionType
-from agent_center.prompt_templates import generate_overall_analysis_prompt
+from agents.types import FunctionInfo, ActionType
+from agents.prompt_templates import generate_overall_analysis_prompt
 
 # Import core functions that already exist
 from core.input_loader import load_dummy_input

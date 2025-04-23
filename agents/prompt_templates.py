@@ -1,5 +1,5 @@
 from typing import List
-from agent_center.types import FunctionInfo
+from agents.types import FunctionInfo
 
 
 def function_summary_prompt_template(fn: FunctionInfo) -> str:

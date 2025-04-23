@@ -2,8 +2,8 @@ import os
 from typing import Dict
 from openai import OpenAI
 from dotenv import load_dotenv
-from agent_center.types import FunctionInfo
-from agent_center.prompt_templates import function_summary_prompt_template
+from agents.types import FunctionInfo
+from agents.prompt_templates import function_summary_prompt_template
 
 load_dotenv()
 

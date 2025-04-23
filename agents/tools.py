@@ -3,7 +3,7 @@ from typing import List, Dict, Any
 from core.function_selector import select_key_functions
 from core.summarizer import summarize_function
 from core.input_loader import load_dummy_input
-from agent_center.types import FunctionInfo
+from agents.types import FunctionInfo
 
 
 def select_important_functions_tool(

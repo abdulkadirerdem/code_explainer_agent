@@ -1,6 +1,6 @@
 from typing import List
 import json
-from agent_center.types import FunctionInfo
+from agents.types import FunctionInfo
 
 
 def format_as_json(file: str, summarized: List[FunctionInfo]) -> str:
