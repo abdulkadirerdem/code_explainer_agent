@@ -22,46 +22,17 @@ Code:
 """
 
 
-def function_selection_prompt_template(functions: List[FunctionInfo], top_n: int = 3) -> str:
-    """Generate a prompt to select the most important functions."""
-    functions_info = "\n\n".join([
-        f"Function Name: {fn['name']}\n"
-        f"Docstring: {fn.get('docstring', 'N/A')}\n"
-        f"Fan-in: {fn.get('fan_in')}\n"
-        f"Fan-out: {fn.get('fan_out')}\n"
-        f"Entry Point: {fn.get('is_entry_point')}\n"
-        f"Code Preview: {fn['code'][:300]}..." if len(fn['code']) > 300 else fn['code']
-        for fn in functions
-    ])
-    
-    return f"""
-You are an expert Python code analyzer.
-
-Your task is to analyze a list of functions and select the {top_n} most important ones.
-Consider factors like:
-- Entry points to the codebase
-- Functions with high fan-in or fan-out (called by many other functions or calls many functions)
-- Functions that implement core business logic
-- Functions with descriptive names and docstrings
-
-Select the functions that would be most helpful to understand the codebase as a whole.
-
----
-
-Functions to analyze:
-{functions_info}
-"""
-
-
 def generate_overall_analysis_prompt(function_summaries: List[dict]) -> str:
     """Generate a prompt to create an overall analysis of the code."""
-    summaries = "\n\n".join([
-        f"Function: {summary['name']}\n"
-        f"Purpose: {summary['purpose']}\n"
-        f"Key Features: {', '.join(summary['key_features'])}"
-        for summary in function_summaries
-    ])
-    
+    summaries = "\n\n".join(
+        [
+            f"Function: {summary['name']}\n"
+            f"Purpose: {summary['purpose']}\n"
+            f"Key Features: {', '.join(summary['key_features'])}"
+            for summary in function_summaries
+        ]
+    )
+
     return f"""
 You are an expert software architect and code reviewer.
 

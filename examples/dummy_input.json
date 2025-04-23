@@ -16,6 +16,22 @@
       "fan_in": 0,
       "fan_out": 1,
       "is_entry_point": true
+    },
+    {
+      "name": "app_main",
+      "code": "def app_main():\n    initialize_app()\n    create_user()\n    return True",
+      "docstring": "",
+      "fan_in": 0,
+      "fan_out": 1,
+      "is_entry_point": true
+    },
+    {
+      "name": "load_env",
+      "code": "def load_env():\n    load_env()\n    return True",
+      "docstring": "",
+      "fan_in": 0,
+      "fan_out": 1,
+      "is_entry_point": true
     }
   ]
 }

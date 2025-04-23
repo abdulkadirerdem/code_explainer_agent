@@ -43,3 +43,9 @@ def load_dummy_input_tool(file_path: str) -> Dict[str, Any]:
         Dictionary with loaded function data
     """
     return load_dummy_input(file_path)
+
+tools = [
+    select_important_functions_tool,
+    summarize_function_tool,
+    load_dummy_input_tool
+]
