@@ -1,5 +1,7 @@
 argparse
-openai
+openai>=1.0.0
 python-dotenv
-openai-agents
 tqdm
+pydantic>=2.0.0
+rich>=10.0.0
+typing-extensions>=4.0.0
